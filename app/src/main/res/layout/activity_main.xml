@@ -3,9 +3,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.button.simulator.MainActivity">
 
+    <TextView
+        android:textColor="@color/colorAccent"
+        android:id="@+id/clicksText"
+        android:text="Clicks: 50"
+        android:textSize="32sp"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:elevation="8dp"
+        app:riv_corner_radius="300dp"
+        android:id="@+id/btnView"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:riv_mutate_background="true"
+        app:riv_tile_mode="repeat"
+        app:riv_oval="true"
+        android:background="@color/colorPrimary"/>
+
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/chooserBtn"
+        android:padding="8dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginEnd="100dp"
+        android:src="@drawable/ic_add_white_48dp"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginBottom="16dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/defaultBtn"
+        android:padding="8dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
+        android:src="@drawable/ic_add_white_48dp"
         android:layout_width="?attr/actionBarSize"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_height="?attr/actionBarSize"
