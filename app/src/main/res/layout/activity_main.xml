@@ -22,10 +22,9 @@
         android:id="@+id/btnView"
         android:layout_gravity="center"
         android:layout_width="300dp"
+        android:scaleType="centerCrop"
         android:layout_height="300dp"
         app:riv_mutate_background="true"
-        app:riv_tile_mode="repeat"
-        app:riv_oval="true"
         android:background="@color/colorPrimary"/>
 
     <android.support.design.widget.FloatingActionButton
@@ -44,7 +43,7 @@
         android:padding="8dp"
         android:layout_marginLeft="100dp"
         android:layout_marginStart="100dp"
-        android:src="@drawable/ic_add_white_48dp"
+        android:src="@drawable/ic_clear_white_48dp"
         android:layout_width="?attr/actionBarSize"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_height="?attr/actionBarSize"

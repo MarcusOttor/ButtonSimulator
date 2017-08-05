@@ -32,9 +32,6 @@ public class MainActivity extends AppCompatActivity {
     private void initViews() {
         btnView = (RoundedImageView) findViewById(R.id.btnView);
         btnView.setOnClickListener(onClick);
-        if (!preferences.getImageUri().isEmpty()) {
-            btnView.setImageURI(Uri.parse(preferences.getImageUri()));
-        }
         chooserBtn = (FloatingActionButton) findViewById(R.id.chooserBtn);
         chooserBtn.setOnClickListener(onClick);
         defaultBtn = (FloatingActionButton) findViewById(R.id.defaultBtn);
@@ -56,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
                 preferences.addClicks(1);
                 updateClicks();
             } else if (view.getId() == R.id.defaultBtn) {
-                preferences.setImageUri("");
                 btnView.setImageBitmap(null);
             }
         }
@@ -74,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
 
         if(requestCode == 1111 && resultCode == RESULT_OK){
             Uri imageUri = data.getData();
-            preferences.setImageUri(imageUri.toString());
             btnView.setImageURI(imageUri);
         }
     }
